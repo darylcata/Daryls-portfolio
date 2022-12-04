@@ -6,6 +6,7 @@
     --dark: #5a5a5a;
     --light: azure;
     --border: 5px solid black;
+    --workbg: black;
 }
 
 
@@ -22,30 +23,41 @@ header {
     border-color: black;
     height: 90px;
     display: flex;
+    align-items:center;
+    justify-content: space-around;
+    flex-shrink: 2;
+    
+}
+
+header div {
+    display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    
+}
 
+header img {
+    width: 100px;
+    height: 100px;
 }
 
 header h1 {
+    padding: 10px;
     color: var(--light);
     text-shadow: -2px 0px black;
-
 }
 
 header nav {
     display: flex;
     align-items: stretch;
     justify-content: space-between;
-
 }
 
 .nav a {
     font-size: 20px;
     padding-left: 30px;
     text-decoration: none;
-    color: var(--light)
+    color: var(--light);
 }
 
 /*hero-banner*/
@@ -62,25 +74,26 @@ header nav {
 
 .hero-banner h2 {
     color: black;
-    font-size: 55px; 
+    font-size: 55px;
     background-color: rgba(255, 255, 255, 0.7);
-    border: var(--border)
+    border: var(--border);
 }
 
 /*about me*/
 
-.page-wrapper h2{
+.page-wrapper h2 {
     font-size: 45px;
+    text-shadow: -2px 0px black;
 }
 
 .page-section {
     padding: 20px;
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-areas: 
+    grid-template-areas:
         "About-me"
         "Work"
-        ;
+    ;
 }
 
 #about {
@@ -89,17 +102,17 @@ header nav {
     background-color: var(--dark);
     display: grid;
     grid-template-columns: 25% 75%;
-    grid-template-areas: 
-    "left-am   right-am"
+    grid-template-areas:
+        "left-am   right-am"
     ;
 }
 
-#about h2{
+#about h2 {
     grid-area: left-am;
     border-right: var(--border);
 }
 
-#about p{
+#about p {
     grid-area: right-am;
     padding: 20px;
 }
@@ -108,11 +121,12 @@ header nav {
 #work {
     grid-area: Work;
     background-color: var(--dark);
-    height: 120vh;
     display: grid;
+    height: auto;
     grid-template-columns: 25% 75%;
-    grid-template-areas: 
-    "left-work  right-work"
+    grid-auto-rows: auto;
+    grid-template-areas:
+        "left-work  right-work"
     ;
 }
 
@@ -124,65 +138,64 @@ header nav {
 
 .my-works {
     grid-area: right-work;
-    padding: 20px;
     text-align: center;
+    padding: 5px;
     display: grid;
     gap: 10px;
     grid-template-columns: 50% 50%;
     grid-template-rows: 25% 25% 25% 25%;
-    grid-template-areas: 
-    "pre-work pre-work"
-    "pre-work pre-work"
-    "week-1   week-2"
-    "week-3   week-4"
+    grid-template-areas:
+        "pre-work pre-work"
+        "pre-work pre-work"
+        "week-1   week-2"
+        "week-3   week-4"
     ;
 }
 
 .text {
-    background-color: black;
+    background-color: var(--workbg);
     color: var(--light);
     border: 3px solid white;
 }
 
-.text a {
-    text-decoration: none;
-    color: var(--light);
-}
-
 #pre-work {
     grid-area: pre-work;
-    background-image: url(../images/pre-work.png);
-    background-size: cover;
     filter: grayscale(100%);
-    background-repeat: no-repeat;
 }
 
 #week-1 {
     grid-area: week-1;
-    background-image: url(../images/week-1.png);
     filter: grayscale(100%);
-    background-size: cover;
 }
 
 #week-2 {
     grid-area: week-2;
-    background-image: url(../images/week-2.png);
     filter: grayscale(100%);
-    background-size: cover;
 }
 
 #week-3 {
     grid-area: week-3;
-    background-image: url(../images/week-3.jpg);
     filter: grayscale(100%);
-    background-size: cover;
 }
 
 #week-4 {
     grid-area: week-4;
-    background-image: url(../images/week-4.jpeg);
     filter: grayscale(100%);
-    background-size: cover;
+}
+
+img {
+    width: 100%;
+    height: 80%;
+    object-fit: fill;
+}
+
+/*make images's filter none*/
+#pre-work:hover,
+#week-1:hover,
+#week-2:hover,
+#week-3:hover,
+#week-4:hover {
+    filter: grayscale(0%);
 }
 
 /*contact*/
@@ -195,7 +208,7 @@ header nav {
     align-content: space-between;
     grid-template-rows: 25% 75%;
     grid-template-areas:
-    "left-contact right-contact"
+        "left-contact right-contact"
     ;
 }
 
@@ -214,3 +227,22 @@ header nav {
     text-decoration: none;
     color: var(--light);
 }
+
+/*media queries*/
+
+@media only screen and (max-width: 768px) {
+    
+    :root {
+        --dark: #2a607c;
+        --light: black;
+        --border: 5px solid black;
+        --workbg: #0072bb;   
+    }
+    
+    body {
+      background-color: aqua;
+    }
+  }
+
+  
+  
