@@ -33,3 +33,5 @@ The following animation shows the web application's appearance and functionality
 
 This link is the live web page of my portfolio.
 
+https://darylcata.github.io/Week-2-challenge/
+
