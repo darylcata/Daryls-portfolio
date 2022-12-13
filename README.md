@@ -19,8 +19,17 @@ Here were the acceptance criteria set forth which I believe I have achieved.
 * When images of the applications are clicked then the user is taken to that deployed application
 * When the page is resized or viewed on various screens and devices then the layout is responsive and adapts to my viewport
 
+##  Description
+
+This challenge gave me a chance to hone my html skills and practice css. I have built a profile for myself. It contains personal and contact information. Some of my work are presented here as well where in you click the image or screenshot of the page and it takes you to the said webpage.
+
 ## Mock-Up
 
 The following animation shows the web application's appearance and functionality:
 
 ![Alt Text](./starter/images/portfolio.gif)
+
+## Links
+
+This link is the live web page of my portfolio.
+
